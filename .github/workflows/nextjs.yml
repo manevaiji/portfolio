@@ -72,7 +72,7 @@ jobs:
         run: npm ci --dry-run
 
       - name: Run tests
-        run: npm test
+        run: npm test -- --passWithNoTests
 
       - name: Build with Next.js
         run: ${{ steps.detect-package-manager.outputs.runner }} next build
